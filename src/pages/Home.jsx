@@ -2,8 +2,17 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "../assets/images/img-sid.png";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Home() {
+  const [showMessage, setShowMessage] = useState(false);
+  const handleClick = () => {
+    setShowMessage(true);
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 2000);
+  };
   return (
     <div className="flex flex-col justify-between h-screen">
       <Navbar />
@@ -17,13 +26,21 @@ function Home() {
             engage. Passionate front-end developer at your service.
           </div>
           <div className="buttons flex items-center gap-5 mt-4">
-            <button className="resume-btn p-2 px-4 rounded-md border-2">
+            <Link
+              onClick={handleClick}
+              to="https://drive.usercontent.google.com/u/0/uc?id=1HNfUR_VZCyCZWrVnVndwSS4V5IC8gdkl&export=download"
+              className="resume-btn p-2 px-4 rounded-md border-2">
               Resume
-            </button>
-            <button className="letstalk-btn p-2 px-4 rounded-md border-2">
-              Let's Talk
-            </button>
+            </Link>
+            <Link
+              to="/contact"
+              className="letstalk-btn p-2 px-4 rounded-md border-2">
+              Contact Me
+            </Link>
           </div>
+          {showMessage && (
+            <p className="message">Resume will be downloaded in seconds....</p>
+          )}
         </div>
         <div className="img w-1/2 flex items-center justify-end">
           <img

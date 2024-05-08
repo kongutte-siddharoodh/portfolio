@@ -78,6 +78,8 @@ span {
   .nav-links-container {
     display: flex;
     flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .home-left-container {
     display: flex;
@@ -90,6 +92,37 @@ span {
   .img {
     width: 100%;
     justify-content: center;
+  }
+  .skills-outer-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .ed-card {
+    width: 272px;
+    height: 137px;
+  }
+  .education-cards {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .proj-outer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .contact-container {
+    border: none;
+  }
+  .home-left-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .about-outer-container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .education-cards {
     display: flex;
@@ -162,5 +195,28 @@ span {
   .about-outer-container {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+.message {
+  color: #0099ff;
+  background-color: #f0f8ff;
+  border: 1px solid #b0c4de;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 2s forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
